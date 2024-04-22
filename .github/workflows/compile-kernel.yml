@@ -6,12 +6,6 @@
 
 name: Compile the kernel
 uses: noame19/amlogic-s9xxx-armbian@main
-with:
-  build_target: kernel
-  kernel_source: friendlyarm/kernel-rockchip@nanopi6-v6.1.y
-  kernel_version: 6.1.y
-  kernel_auto: true
-  kernel_sign: -yuki
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -24,6 +18,7 @@ on:
         options:
           - unifreq
           - codesnas
+          - friendlyarm/kernel-rockchip@nanopi6-v6.1.y
       kernel_version:
         description: "Select kernel version"
         required: false
@@ -76,7 +71,7 @@ on:
         type: choice
         options:
           - -ophub
-          - -yourname
+          - -yuki
 
 env:
   TZ: America/New_York
