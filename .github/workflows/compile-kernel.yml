@@ -5,7 +5,13 @@
 #==========================================================================
 
 name: Compile the kernel
-
+uses: noame19/amlogic-s9xxx-armbian@main
+with:
+  build_target: kernel
+  kernel_source: friendlyarm/kernel-rockchip@nanopi6-v6.1.y
+  kernel_version: 6.1.y
+  kernel_auto: true
+  kernel_sign: -yuki
 on:
   repository_dispatch:
   workflow_dispatch:
