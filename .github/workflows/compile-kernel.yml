@@ -5,7 +5,7 @@
 #==========================================================================
 
 name: Compile the kernel
-uses: noame19/amlogic-s9xxx-armbian@main
+
 on:
   repository_dispatch:
   workflow_dispatch:
